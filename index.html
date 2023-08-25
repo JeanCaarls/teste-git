@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>button</title>
+    <!-- css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+
+        .container {
+            margin-top: 2%;
+            margin-left: 5%;
+
+            display: flex;
+            background-color: #cecece;
+
+            height: 90vh;
+            width: 90vw;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #btn {
+            position: absolute;
+
+            width: 10%;
+            height: 10%;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <button id="btn" .onclick=funcBtn()>1</button>
+    </div>
+
 </body>
+<script>
+    var valueBtn = document.getElementById("btn");
+    var backContainer = document.getElementsByClassName("container")[0];
+
+    valueBtn.addEventListener("click", function() {
+        if (valueBtn.innerText === "1") {
+            valueBtn.innerText = "2";
+            backContainer.style.background = "#000"
+
+        } else {
+            valueBtn.innerText = "1";
+            backContainer.style.background = "#ececec"
+        }
+    });
+
+
+
+</script>
+
 </html>
